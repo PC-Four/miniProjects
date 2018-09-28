@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <style media="screen">
+      button {background-color:#BA3D30;}
+      button:hover {background-color:#BA0000;}
+    </style>
+  </head>
+  <body  >
+    <div class="master" style=" background-image: linear-gradient(#ffe442, #ffef8e); height: 1920px;
+      margin: 0;
+      background-repeat: no-repeat;">
+
+
+    <br></br>
+    <div class="buttonholder" style=" margin: auto; width: 90%; border: 3px #ffef8e; padding: 10px;">
+      <button id="btn-letter" type="button" name="button" style="margin: auto; color: white; width: 100%; border: 3px #ffef8e; padding: 10px;">get a random letter</button>
+
+    </div>
+    <div class="results" style=" background-color: #ffef8e; margin: auto; width: 100%; border: 3px #ffef8e; padding: 10px; text-align: center; font-family: sans-serif">
+      <h3>Resulting Letter:</h3>
+      <h2 id="answers">-</h2>
+    </div>
+    <br></br>
+    <div class="answers">
+      <table style=" background-color: #BA3D30; color: white;margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+        <tbody>
+          <tr><th>Topics</th>
+            <td><input id="" type="text" name="" value=""> </td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+            <td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+          </tr>
+          <tr><th>______________</th>
+
+          </tr>
+        </tbody>
+      </table>
+      <br></br>
+      <!-- ____________________________________________________________________________________________________________________________ -->
+      <table style=" background-color: #F35D3B; color: white; margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+        <tbody>
+
+          <tr><th>answers round 1</th>
+            <td><input id="" type="text" name="" value=""> </td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+            <td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+          </tr>
+
+          <tr><tr><th>score round 1</th>
+            <td><input id="one" type="number" name="" value=""> </td><td> <input id="two" type="number" name="" value=""></td><td> <input id="three" type="number" name="" value=""></td>
+            <td><input id="four" type="number" name="" value=""></td><td><input id="five" type="number" name="" value=""></td><td><input id="six" type="number" name="" value=""></td>
+          </tr>
+            <th>total for round 1</th>
+            <td><p id="roundOneTotal"></p> </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+<!-- ____________________________________________________________________________________________________________________________ -->
+
+        <table style=" background-color: #db3d1a; color: white; margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+          <tbody>
+
+            <tr><th>answers round 2</th>
+              <td><input id="" type="text" name="" value=""> </td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+              <td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+            </tr>
+
+            <tr><tr><th>score round 2</th>
+              <td><input id="one2" type="number" name="" value=""> </td><td> <input id="two2" type="number" name="" value=""></td><td> <input id="three2" type="number" name="" value=""></td>
+              <td><input id="four2" type="number" name="" value=""></td><td><input id="five2" type="number" name="" value=""></td><td><input id="six2" type="number" name="" value=""></td>
+            </tr>
+              <th>total for round 2</th>
+              <td><p id="roundOneTotal2"></p> </td>
+            </tr>
+
+          </tbody>
+      </table>
+
+<!-- ____________________________________________________________________________________________________________________________ -->
+
+      <table style=" background-color: #F35D3B; color: white; margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+        <tbody>
+
+          <tr><th>answers round 3</th>
+            <td><input id="" type="text" name="" value=""> </td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+            <td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+          </tr>
+
+          <tr><tr><th>score round 3</th>
+            <td><input id="one3" type="number" name="" value=""> </td><td> <input id="two3" type="number" name="" value=""></td><td> <input id="three3" type="number" name="" value=""></td>
+            <td><input id="four3" type="number" name="" value=""></td><td><input id="five3" type="number" name="" value=""></td><td><input id="six3" type="number" name="" value=""></td>
+          </tr>
+            <th>total for round 3</th>
+            <td><p id="roundOneTotal3"></p> </td>
+          </tr>
+
+        </tbody>
+
+<!-- ____________________________________________________________________________________________________________________________ -->
+
+        <table style=" background-color: #db3d1a; color: white; margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+          <tbody>
+
+            <tr><th>answers round 4</th>
+              <td><input id="" type="text" name="" value=""> </td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+              <td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+            </tr>
+
+            <tr><tr><th>score round 4</th>
+              <td><input id="one4" type="number" name="" value=""> </td><td> <input id="two4" type="number" name="" value=""></td><td> <input id="three4" type="number" name="" value=""></td>
+              <td><input id="four4" type="number" name="" value=""></td><td><input id="five4" type="number" name="" value=""></td><td><input id="six4" type="number" name="" value=""></td>
+            </tr>
+              <th>total for round 4</th>
+              <td><p id="roundOneTotal4"></p> </td>
+            </tr>
+          </tbody>
+        </table>
+<!-- ____________________________________________________________________________________________________________________________ -->
+
+<table style=" background-color: #F35D3B; color: white; margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+  <tbody>
+
+    <tr><th>answers round 5</th>
+      <td><input id="" type="text" name="" value=""> </td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+      <td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+    </tr>
+
+    <tr><tr><th>score round 5</th>
+      <td><input id="one5" type="number" name="" value=""> </td><td> <input id="two5" type="number" name="" value=""></td><td> <input id="three5" type="number" name="" value=""></td>
+      <td><input id="four5" type="number" name="" value=""></td><td><input id="five5" type="number" name="" value=""></td><td><input id="six5" type="number" name="" value=""></td>
+    </tr>
+      <th>total for round 5</th>
+      <td><p id="roundOneTotal5"></p> </td>
+    </tr>
+  </tbody>
+</table>
+<!-- ____________________________________________________________________________________________________________________________ -->
+
+<table style=" background-color: #db3d1a; color: white; margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+  <tbody>
+
+    <tr><th>answers round 6</th>
+      <td><input id="" type="text" name="" value=""> </td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+      <td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+    </tr>
+
+    <tr><tr><th>score round 6</th>
+      <td><input id="one6" type="number" name="" value=""> </td><td> <input id="two6" type="number" name="" value=""></td><td> <input id="three6" type="number" name="" value=""></td>
+      <td><input id="four6" type="number" name="" value=""></td><td><input id="five6" type="number" name="" value=""></td><td><input id="six6" type="number" name="" value=""></td>
+    </tr>
+      <th>total for round 6</th>
+      <td><p id="roundOneTotal6"></p> </td>
+    </tr>
+  </tbody>
+</table>
+<!-- ____________________________________________________________________________________________________________________________ -->
+
+<table style=" background-color: #F35D3B; color: white; margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+  <tbody>
+
+    <tr><th>answers round 7</th>
+      <td><input id="" type="text" name="" value=""> </td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+      <td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td><td><input id="" type="text" name="" value=""></td>
+    </tr>
+
+    <tr><tr><th>score round 7</th>
+      <td><input id="one7" type="number" name="" value=""> </td><td> <input id="two7" type="number" name="" value=""></td><td> <input id="three7" type="number" name="" value=""></td>
+      <td><input id="four7" type="number" name="" value=""></td><td><input id="five7" type="number" name="" value=""></td><td><input id="six7" type="number" name="" value=""></td>
+    </tr>
+      <th>total for round 7</th>
+      <td><p id="roundOneTotal7"></p> </td>
+    </tr>
+  </tbody>
+</table>
+<table style=" background-color: #F35D3B; color: white; margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+  <tbody>
+
+      <th>Total for game</th><br></br>
+      <td><p id="totaltotal"></p> </td>
+    </tr>
+  </tbody>
+</table>
+<!-- ____________________________________________________________________________________________________________________________ -->
+
+
+    </div>
+    </div>
+  </body>
+</html>
