@@ -27,16 +27,69 @@ var one6, two6, three6, four6, five6, six6, roundOneTotal6, roundOneTotalPrimiti
 var one7, two7, three7, four7, five7, six7, roundOneTotal7, roundOneTotalPrimitive7;
 
 var grandTotal = 0;
+var can;
+var roundTimer = 60;
+  var endedMakeTrue;
+  var starteded = false;
 
 function setup() {
+  frameRate(15)
+  if (starteded) {
+    document.getElementById('btn-letter').disabled = true;
+  }
+  else {
+      document.getElementById('btn-letter').disabled = false;
+  }
+
   document.getElementById('btn-letter').addEventListener('click', function(){
     result = random(letters);
     document.getElementById('answers').innerHTML = result;
-
+    // starteded = true;
   })
+  // setInterval(function() {
+  //   endedMakeTrue = roundTimer--;
+  //   if (endedMakeTrue <= 0) {
+  //     starteded = false;
+  //   }
+  // }, 1000)
+document.getElementById('btn-timer').addEventListener('click', function(){
+  starteded = true;
+})
+
+    setInterval(function() {
+    if (starteded) {
+      var countdowner = roundTimer--;
+      var theResultingSeconds;
+      var roundTimerMath = Math.floor(countdowner / 60);
+      var roundTimerMathSeconds = Math.floor(countdowner % 60);
+      if (roundTimerMathSeconds < 10) {
+        theResultingSeconds = '0' + roundTimerMathSeconds;
+      }
+      else {
+        theResultingSeconds = roundTimerMathSeconds;
+      }
+      var timeIs = roundTimerMath + ':' + theResultingSeconds;
+      if (roundTimer >= 0) {
+        document.getElementById('timer').innerHTML = timeIs;
+      }
+      else {
+        document.getElementById('timer').innerHTML = 'Time Is Up'
+        starteded = false;
+      }
+    }
+    if (!starteded) {
+      roundTimer = 60;
+    }
+    }, 1000)
+
+  // can = createCanvas(1062, 600);
+  // can.style('z-index', '1')
+  // can.style('position', 'absolute')
+
 }
 
 function draw() {
+  console.log(starteded)
   roundOne();
   roundTwo();
   roundThree();
