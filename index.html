@@ -11,13 +11,18 @@
       button {background-color:#BA3D30;}
       button:hover {background-color:#BA0000;}
     </style>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/album.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content.css"></head>
   </head>
   <body>
     <div class="master" style=" background-image: linear-gradient(#ffe442, #ffef8e); height: 1920px;
       margin: 0;
       background-repeat: no-repeat;">
 
-
+    <div class="" style="z-index: 1;margin: auto; width: 100%; border: 3px #ffef8e; padding: 1px; background-color: #ffef8e; position: fixed; ">
     <br></br>
     <div class="buttonholder" style=" margin: auto; width: 90%; border: 3px #ffef8e; padding: 10px;">
       <button id="btn-letter" type="button" name="button" style="margin: auto; color: white; width: 100%; border: 3px #ffef8e; padding: 10px;">get a random letter</button>
@@ -25,132 +30,135 @@
       <button id="btn-timer" type="button" name="button" style="margin: auto; color: white; width: 100%; border: 3px #ffef8e; padding: 10px;">start Timer</button>
 
     </div>
-    <div class="results" style=" background-color: #ffef8e; margin: auto; width: 100%; border: 3px #ffef8e; padding: 10px; text-align: center; font-family: sans-serif">
+    <div class="results" style=" background-color: #ffef8e; margin: auto; width: 100%; border: 3px #ffef8e; padding: 1px; text-align: center; font-family: sans-serif">
       <h3>Resulting Letter:</h3>
-      <h2 id="answers">-</h2>
-      <h1 id="timer"></h1>
+      <h3 id="answers">-</h2>
+      <h3 id="timer">-</h1>
     </div>
-    <br></br>
-    <div class="answers">
-      <table  style=" background-color: #BA3D30; color: white;margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
-        <tbody>
-          <tr><th>Topics</th>
-            <td> <td><select class="topics" name="">
-                          <option value="sports teams">sports teams</option>
-                          <option value="airlines">airlines</option>
-                          <option value="animals">animals</option>
-                          <option value="birds">birds</option>
-                          <option value="companies">companies</option>
-                          <option value="food">food</option>
-                          <option value="fruit / vegetables">fruit / vegetables</option>
-                          <option value="countries">countries</option>
-                          <option value="capital cities">sports teams</option>
-                          <option value="food">food</option>
-                          <option value="movie titles">movie titles</option>
-                          <option value="song titles">song titles</option>
-                          <option value="colors">colors</option>
-                          <option value="currencies">currencies</option>
-                          <option value="clothing brands">clothing brands</option>
-                          <option value="celebrities">celebrities</option>
-                          <option value="magazines">magazines</option>
-                        </select> </td><td><select class="topics" name="">
-                                      <option value="sports teams">sports teams</option>
-                                      <option value="airlines">airlines</option>
-                                      <option value="animals">animals</option>
-                                      <option value="birds">birds</option>
-                                      <option value="companies">companies</option>
-                                      <option value="food">food</option>
-                                      <option value="fruit / vegetables">fruit / vegetables</option>
-                                      <option value="countries">countries</option>
-                                      <option value="capital cities">sports teams</option>
-                                      <option value="food">food</option>
-                                      <option value="movie titles">movie titles</option>
-                                      <option value="song titles">song titles</option>
-                                      <option value="colors">colors</option>
-                                      <option value="currencies">currencies</option>
-                                      <option value="clothing brands">clothing brands</option>
-                                      <option value="celebrities">celebrities</option>
-                                      <option value="magazines">magazines</option>
-                                    </select></td><td><select class="topics" name="">
-                                                  <option value="sports teams">sports teams</option>
-                                                  <option value="airlines">airlines</option>
-                                                  <option value="animals">animals</option>
-                                                  <option value="birds">birds</option>
-                                                  <option value="companies">companies</option>
-                                                  <option value="food">food</option>
-                                                  <option value="fruit / vegetables">fruit / vegetables</option>
-                                                  <option value="countries">countries</option>
-                                                  <option value="capital cities">sports teams</option>
-                                                  <option value="food">food</option>
-                                                  <option value="movie titles">movie titles</option>
-                                                  <option value="song titles">song titles</option>
-                                                  <option value="colors">colors</option>
-                                                  <option value="currencies">currencies</option>
-                                                  <option value="clothing brands">clothing brands</option>
-                                                  <option value="celebrities">celebrities</option>
-                                                  <option value="magazines">magazines</option>
-                                                </select></td>
-            <td><select class="topics" name="">
-                          <option value="sports teams">sports teams</option>
-                          <option value="airlines">airlines</option>
-                          <option value="animals">animals</option>
-                          <option value="birds">birds</option>
-                          <option value="companies">companies</option>
-                          <option value="food">food</option>
-                          <option value="fruit / vegetables">fruit / vegetables</option>
-                          <option value="countries">countries</option>
-                          <option value="capital cities">sports teams</option>
-                          <option value="food">food</option>
-                          <option value="movie titles">movie titles</option>
-                          <option value="song titles">song titles</option>
-                          <option value="colors">colors</option>
-                          <option value="currencies">currencies</option>
-                          <option value="clothing brands">clothing brands</option>
-                          <option value="celebrities">celebrities</option>
-                          <option value="magazines">magazines</option>
-                        </select></td><td><select class="topics" name="">
-                                      <option value="sports teams">sports teams</option>
-                                      <option value="airlines">airlines</option>
-                                      <option value="animals">animals</option>
-                                      <option value="birds">birds</option>
-                                      <option value="companies">companies</option>
-                                      <option value="food">food</option>
-                                      <option value="fruit / vegetables">fruit / vegetables</option>
-                                      <option value="countries">countries</option>
-                                      <option value="capital cities">sports teams</option>
-                                      <option value="food">food</option>
-                                      <option value="movie titles">movie titles</option>
-                                      <option value="song titles">song titles</option>
-                                      <option value="colors">colors</option>
-                                      <option value="currencies">currencies</option>
-                                      <option value="clothing brands">clothing brands</option>
-                                      <option value="celebrities">celebrities</option>
-                                      <option value="magazines">magazines</option>
-                                    </select></td><td><select class="topics" name="">
-                                                  <option value="sports teams">sports teams</option>
-                                                  <option value="airlines">airlines</option>
-                                                  <option value="animals">animals</option>
-                                                  <option value="birds">birds</option>
-                                                  <option value="companies">companies</option>
-                                                  <option value="food">food</option>
-                                                  <option value="fruit / vegetables">fruit / vegetables</option>
-                                                  <option value="countries">countries</option>
-                                                  <option value="capital cities">sports teams</option>
-                                                  <option value="food">food</option>
-                                                  <option value="movie titles">movie titles</option>
-                                                  <option value="song titles">song titles</option>
-                                                  <option value="colors">colors</option>
-                                                  <option value="currencies">currencies</option>
-                                                  <option value="clothing brands">clothing brands</option>
-                                                  <option value="celebrities">celebrities</option>
-                                                  <option value="magazines">magazines</option>
-                                                </select></td>
-          </tr>
-          <tr><th>______________</th>
+    
+    <table  style=" background-color: #BA3D30; color: white;margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
+      <tbody>
+        <tr><th>Topics</th>
+          <td> <td><select class="topics" name="">
+                        <option value="sports teams">sports teams</option>
+                        <option value="airlines">airlines</option>
+                        <option value="animals">animals</option>
+                        <option value="birds">birds</option>
+                        <option value="companies">companies</option>
+                        <option value="food">food</option>
+                        <option value="fruit / vegetables">fruit / vegetables</option>
+                        <option value="countries">countries</option>
+                        <option value="capital cities">sports teams</option>
+                        <option value="food">food</option>
+                        <option value="movie titles">movie titles</option>
+                        <option value="song titles">song titles</option>
+                        <option value="colors">colors</option>
+                        <option value="currencies">currencies</option>
+                        <option value="clothing brands">clothing brands</option>
+                        <option value="celebrities">celebrities</option>
+                        <option value="magazines">magazines</option>
+                      </select> </td><td><select class="topics" name="">
+                                    <option value="sports teams">sports teams</option>
+                                    <option value="airlines">airlines</option>
+                                    <option value="animals">animals</option>
+                                    <option value="birds">birds</option>
+                                    <option value="companies">companies</option>
+                                    <option value="food">food</option>
+                                    <option value="fruit / vegetables">fruit / vegetables</option>
+                                    <option value="countries">countries</option>
+                                    <option value="capital cities">sports teams</option>
+                                    <option value="food">food</option>
+                                    <option value="movie titles">movie titles</option>
+                                    <option value="song titles">song titles</option>
+                                    <option value="colors">colors</option>
+                                    <option value="currencies">currencies</option>
+                                    <option value="clothing brands">clothing brands</option>
+                                    <option value="celebrities">celebrities</option>
+                                    <option value="magazines">magazines</option>
+                                  </select></td><td><select class="topics" name="">
+                                                <option value="sports teams">sports teams</option>
+                                                <option value="airlines">airlines</option>
+                                                <option value="animals">animals</option>
+                                                <option value="birds">birds</option>
+                                                <option value="companies">companies</option>
+                                                <option value="food">food</option>
+                                                <option value="fruit / vegetables">fruit / vegetables</option>
+                                                <option value="countries">countries</option>
+                                                <option value="capital cities">sports teams</option>
+                                                <option value="food">food</option>
+                                                <option value="movie titles">movie titles</option>
+                                                <option value="song titles">song titles</option>
+                                                <option value="colors">colors</option>
+                                                <option value="currencies">currencies</option>
+                                                <option value="clothing brands">clothing brands</option>
+                                                <option value="celebrities">celebrities</option>
+                                                <option value="magazines">magazines</option>
+                                              </select></td>
+          <td><select class="topics" name="">
+                        <option value="sports teams">sports teams</option>
+                        <option value="airlines">airlines</option>
+                        <option value="animals">animals</option>
+                        <option value="birds">birds</option>
+                        <option value="companies">companies</option>
+                        <option value="food">food</option>
+                        <option value="fruit / vegetables">fruit / vegetables</option>
+                        <option value="countries">countries</option>
+                        <option value="capital cities">sports teams</option>
+                        <option value="food">food</option>
+                        <option value="movie titles">movie titles</option>
+                        <option value="song titles">song titles</option>
+                        <option value="colors">colors</option>
+                        <option value="currencies">currencies</option>
+                        <option value="clothing brands">clothing brands</option>
+                        <option value="celebrities">celebrities</option>
+                        <option value="magazines">magazines</option>
+                      </select></td><td><select class="topics" name="">
+                                    <option value="sports teams">sports teams</option>
+                                    <option value="airlines">airlines</option>
+                                    <option value="animals">animals</option>
+                                    <option value="birds">birds</option>
+                                    <option value="companies">companies</option>
+                                    <option value="food">food</option>
+                                    <option value="fruit / vegetables">fruit / vegetables</option>
+                                    <option value="countries">countries</option>
+                                    <option value="capital cities">sports teams</option>
+                                    <option value="food">food</option>
+                                    <option value="movie titles">movie titles</option>
+                                    <option value="song titles">song titles</option>
+                                    <option value="colors">colors</option>
+                                    <option value="currencies">currencies</option>
+                                    <option value="clothing brands">clothing brands</option>
+                                    <option value="celebrities">celebrities</option>
+                                    <option value="magazines">magazines</option>
+                                  </select></td><td><select class="topics" name="">
+                                                <option value="sports teams">sports teams</option>
+                                                <option value="airlines">airlines</option>
+                                                <option value="animals">animals</option>
+                                                <option value="birds">birds</option>
+                                                <option value="companies">companies</option>
+                                                <option value="food">food</option>
+                                                <option value="fruit / vegetables">fruit / vegetables</option>
+                                                <option value="countries">countries</option>
+                                                <option value="capital cities">sports teams</option>
+                                                <option value="food">food</option>
+                                                <option value="movie titles">movie titles</option>
+                                                <option value="song titles">song titles</option>
+                                                <option value="colors">colors</option>
+                                                <option value="currencies">currencies</option>
+                                                <option value="clothing brands">clothing brands</option>
+                                                <option value="celebrities">celebrities</option>
+                                                <option value="magazines">magazines</option>
+                                              </select></td>
+        </tr>
+        <tr><th>______________</th>
 
-          </tr>
-        </tbody>
-      </table>
+        </tr>
+      </tbody>
+    </table>
+
+    </div>
+    <div class="answers" style="padding-top: 350px;">
+
       <br></br>
       <!-- ____________________________________________________________________________________________________________________________ -->
       <table style=" background-color: #F35D3B; color: white; margin: auto; width: 90%; border: 3px ; padding: 10px; text-align: center; font-family: sans-serif">
@@ -297,5 +305,217 @@
     </tr>
   </tbody>
 </table>
+<!-- ____________________________________________________________________________________________________________________________ -->
+
+
+    <!-- </div>
+    </div>
+    <div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body">
+            <h2 style="text-align: center">1</h2>
+              <select class="form-control" name="">
+                <option value=""></option>
+              </select>
+              <input class="form-control" type="text" name="" value="">
+              <input class="form-control" type="text" name="" value="">
+              <p class="form-control">50</p>
+              <select class="form-control" name="">
+                <option value=""></option>
+              </select>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body">
+            <h1>member login</h1>
+              <select class="form-control" name="">
+                <option value=""></option>
+              </select>
+              <input class="form-control" type="text" name="" value="">
+              <input class="form-control" type="text" name="" value="">
+              <p class="form-control">50</p>
+              <select class="form-control" name="">
+                <option value=""></option>
+              </select>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body">
+            <h1>member login</h1>
+              <select class="form-control" name="">
+                <option value=""></option>
+              </select>
+              <input class="form-control" type="text" name="" value="">
+              <input class="form-control" type="text" name="" value="">
+              <p class="form-control">50</p>
+              <select class="form-control" name="">
+                <option value=""></option>
+              </select>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body">
+              <h2 style="text-align: center">4</h2>
+            <select class="form-control" name="">
+                          <option value="sports teams">sports teams</option>
+                          <option value="airlines">airlines</option>
+                          <option value="animals">animals</option>
+                          <option value="birds">birds</option>
+                          <option value="companies">companies</option>
+                          <option value="food">food</option>
+                          <option value="fruit / vegetables">fruit / vegetables</option>
+                          <option value="countries">countries</option>
+                          <option value="capital cities">sports teams</option>
+                          <option value="food">food</option>
+                          <option value="movie titles">movie titles</option>
+                          <option value="song titles">song titles</option>
+                          <option value="colors">colors</option>
+                          <option value="currencies">currencies</option>
+                          <option value="clothing brands">clothing brands</option>
+                          <option value="celebrities">celebrities</option>
+                          <option value="magazines">magazines</option>
+              </select>
+
+              <input  class="form-control" type="text" name="" placeholder="Enter Answer 5.1" value="">
+              <input id="five" class="form-control" type="number" name="" placeholder="Enter Marks 5.1" value="">
+              <br>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <p style="text-align: center">-------------</p>
+              <input  class="form-control" type="text" name="" placeholder="Enter Answer 5.1" value="">
+              <input id="five" class="form-control" type="number" name="" placeholder="Enter Marks 5.1" value="">
+              <br>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <p style="text-align: center">-------------</p>
+
+              <input  class="form-control" type="text" name="" placeholder="Enter Answer 5.1" value="">
+              <input id="five" class="form-control" type="number" name="" placeholder="Enter Marks 5.1" value="">
+              <br>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <p style="text-align: center">-------------</p>
+
+              <input  class="form-control" type="text" name="" placeholder="Enter Answer 5.1" value="">
+              <input id="five" class="form-control" type="number" name="" placeholder="Enter Marks 5.1" value="">
+              <br>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <p style="text-align: center">-------------</p>
+              <input  class="form-control" type="text" name="" placeholder="Enter Answer 5.1" value="">
+              <input id="five" class="form-control" type="number" name="" placeholder="Enter Marks 5.1" value="">
+              <br>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <p style="text-align: center">-------------</p>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body">
+              <h2 style="text-align: center">5</h2>
+            <select class="form-control" name="">
+                          <option value="sports teams">sports teams</option>
+                          <option value="airlines">airlines</option>
+                          <option value="animals">animals</option>
+                          <option value="birds">birds</option>
+                          <option value="companies">companies</option>
+                          <option value="food">food</option>
+                          <option value="fruit / vegetables">fruit / vegetables</option>
+                          <option value="countries">countries</option>
+                          <option value="capital cities">sports teams</option>
+                          <option value="food">food</option>
+                          <option value="movie titles">movie titles</option>
+                          <option value="song titles">song titles</option>
+                          <option value="colors">colors</option>
+                          <option value="currencies">currencies</option>
+                          <option value="clothing brands">clothing brands</option>
+                          <option value="celebrities">celebrities</option>
+                          <option value="magazines">magazines</option>
+              </select>
+
+              <input  class="form-control" type="text" name="" placeholder="Enter Answer 5.1" value="">
+              <input id="five" class="form-control" type="number" name="" placeholder="Enter Marks 5.1" value="">
+              <br>
+              <p class="" style="text-align: center"> round 1 total:</p>
+              <p id="roundOneTotal" class="form-control"></p>
+              <p style="text-align: center">-------------</p>
+              <input class="form-control" type="text" name="" value="">
+              <input id="five2" class="form-control" type="text" name="" value="">
+              <br>
+              <p class="" style="text-align: center"> round 2 total:</p>
+              <p id="roundOneTotal2" class="form-control"></p>
+              <p style="text-align: center">-------------</p>
+
+              <input class="form-control" type="text" name="" value="">
+              <input id="five3" class="form-control" type="text" name="" value="">
+              <p class="form-control"></p>
+
+              <input class="form-control" type="text" name="" value="">
+              <input id="five4" class="form-control" type="text" name="" value="">
+              <p class="form-control"></p>
+
+              <input class="form-control" type="text" name="" value="">
+              <input id="five5" class="form-control" type="text" name="" value="">
+              <p class="form-control">50</p>
+
+              <input class="form-control" type="text" name="" value="">
+              <input id="five6" class="form-control" type="text" name="" value="">
+              <p class="form-control"></p>
+
+              <input class="form-control" type="text" name="" value="">
+              <input id="five7" class="form-control" type="text" name="" value="">
+              <p class="form-control"></p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+</div> -->
+
   </body>
+  <script src="css/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="css/popper.min.js"></script>
+<script src="css/bootstrap.min.js"></script>
+<script src="css/holder.min.js"></script>
 </html>
