@@ -28,7 +28,7 @@ var one7, two7, three7, four7, five7, six7, roundOneTotal7, roundOneTotalPrimiti
 
 var grandTotal = 0;
 var can;
-var roundTimer = 60;
+var roundTimer = 90;
   var endedMakeTrue;
   var starteded = false;
 
@@ -78,7 +78,7 @@ document.getElementById('btn-timer').addEventListener('click', function(){
       }
     }
     if (!starteded) {
-      roundTimer = 60;
+      roundTimer = 90;
     }
     }, 1000)
 
